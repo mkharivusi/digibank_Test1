@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<title>Transaction List</title>
+</h:head>
+<h:body>
+	<h3>Transaction Details</h3>
+	<h:form>
+			<h:dataTable value="#{transactioncontroller.transactionList}" var="trans" border="2" cellspacing="1" cellpadding="1">
+			<h:column >
+				<f:facet name="header">
+				<h:outputText value="Account Number"/>
+				</f:facet>
+				<h:outputText value="#{trans.accountNumber}"></h:outputText>
+			</h:column>
+			<h:column >
+				<f:facet name="header">
+				<h:outputText value="Source Passport"/>
+				</f:facet>
+				<h:outputText value="#{trans.sourcePassport}"></h:outputText>
+			</h:column>
+			<h:column >
+				<f:facet name="header">
+				<h:outputText value="Amount"/>
+				</f:facet>
+				<h:outputText value="#{trans.amount}"></h:outputText>
+			</h:column>
+			</h:dataTable>
+	</h:form>
+</h:body>
+</html>
